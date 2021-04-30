@@ -16,9 +16,9 @@ import {
   useColorModeValue,
   Stack,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { ArrowBackIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-const Links = ['Dashboard', 'Projects', 'Team'];
+const Links = ['Dashboard', 'Team'];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -41,24 +41,23 @@ export default function Simple() {
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          {/* <IconButton
+          <IconButton
             size={'md'}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            icon={<ArrowBackIcon />}
             aria-label={'Open Menu'}
-            display={{ md: !isOpen ? 'none' : 'inherit' }}
             onClick={isOpen ? onClose : onOpen}
-          /> */}
+          />
           <HStack spacing={8} alignItems={'center'}>
             <Box>Logo</Box>
             <HStack
               as={'nav'}
               spacing={4}
-              display={{ base: 'none', md: 'flex' }}>
+            >
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
-              ))}
+              ))}              
             </HStack>
-          </HStack>
+          </HStack>          
           <Flex alignItems={'center'}>
             <Menu>
               <MenuButton
