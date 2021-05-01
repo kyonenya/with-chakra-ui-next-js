@@ -5,6 +5,7 @@ import DarkModeSwitch from '../components/DarkModeSwitch2'
 import NavBarWithDropdown from '../components/NavBarWithDropdown'
 import BlogArticleList from '../components/BlogArticleList'
 import PostList from '../components/PostList'
+import TagCard from '../components/TagCard'
 
 const Home = () => {
   const { colorMode } = useColorMode()

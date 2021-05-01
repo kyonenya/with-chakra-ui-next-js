@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import {
   Box,
+  Badge,
   Flex,
   Heading,
   Text,
@@ -19,7 +20,7 @@ const TestimonialContent = ({ children }: { children: ReactNode }) => {
     <Stack
       bg={useColorModeValue('white', 'gray.800')}
       boxShadow={'lg'}
-      p={8}
+      p={6}
       rounded={'xl'}
       align={'center'}
       pos={'relative'}
@@ -33,7 +34,7 @@ const TestimonialText = ({ children }: { children: ReactNode }) => {
   return (
     <Text
       textAlign={'left'}
-      color={useColorModeValue('gray.600', 'gray.400')}
+      color={useColorModeValue('gray.700', 'gray.300')}
       fontSize={'md'}
     >
       {children}
@@ -73,6 +74,24 @@ export default function WithSpeechBubbles() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
                 neque sed imperdiet nibh lectus feugiat nunc sem.
               </TestimonialText>
+                <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
+                  <Badge
+                    px={2}
+                    py={1}
+                    bg={useColorModeValue('gray.100', 'gray.700')}
+                    fontWeight={'400'}
+                  >
+                    #art
+                  </Badge>
+                  <Badge
+                    px={2}
+                    py={1}
+                    bg={useColorModeValue('gray.100', 'gray.700')}
+                    fontWeight={'400'}
+                  >
+                    #music
+                  </Badge>
+                </Stack>
             </TestimonialContent>
           </Testimonial>
         </Stack>
