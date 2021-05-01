@@ -4,6 +4,7 @@ import SomeForm from '../components/SomeForm'
 import DarkModeSwitch from '../components/DarkModeSwitch2'
 import NavBarWithDropdown from '../components/NavBarWithDropdown'
 import BlogArticleList from '../components/BlogArticleList'
+import PostList from '../components/PostList'
 
 const Home = () => {
   const { colorMode } = useColorMode()
@@ -11,7 +12,7 @@ const Home = () => {
     <>
       <DarkModeSwitch />
       <NavBarWithDropdown />
-      <BlogArticleList />
+      <PostList />
     </>
   )
 }
