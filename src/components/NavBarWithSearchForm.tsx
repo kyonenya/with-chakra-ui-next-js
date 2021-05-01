@@ -24,6 +24,7 @@ import {
   ArrowBackIcon,
   CheckIcon,
   CloseIcon,
+  CheckCircleIcon,
   SearchIcon,
   TriangleUpIcon,
   TriangleDownIcon,
@@ -51,14 +52,14 @@ export default function Simple() {
   return (
     <>
     <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <IconButton
-            size={'md'}
-            icon={<ArrowBackIcon />}
-            aria-label={'Back to Top'}
-            onClick={isOpen ? onClose : onOpen}
-          />
-          <HStack spacing={8} alignItems={'center'}>
+      <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+        <IconButton
+          size={'md'}
+          icon={<ArrowBackIcon />}
+          aria-label={'Back to Top'}
+          onClick={isOpen ? onClose : onOpen}
+        />
+        <HStack spacing={8} alignItems={'center'}>
 
     <InputGroup size="md">
       <InputLeftElement>
@@ -79,7 +80,9 @@ export default function Simple() {
 
           <Flex alignItems={'center'}>
             <IconButton
-              size={'md'}
+              size={'sm'}
+              w={10}
+              h={10}
               icon={<CheckIcon />}
               aria-label={'Submit'}
             />
