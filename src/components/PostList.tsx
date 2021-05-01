@@ -34,7 +34,7 @@ const TestimonialText = ({ children }: { children: ReactNode }) => {
     <Text
       textAlign={'left'}
       color={useColorModeValue('gray.600', 'gray.400')}
-      fontSize={'sm'}
+      fontSize={'md'}
     >
       {children}
     </Text>
@@ -44,9 +44,9 @@ const TestimonialText = ({ children }: { children: ReactNode }) => {
 export default function WithSpeechBubbles() {
   return (
     <Box bg={useColorModeValue('gray.100', 'gray.700')}>
-      <Container maxW={'7xl'} py={16} as={Stack} spacing={12}>
+      <Container maxW={'7xl'} py={4} as={Stack} spacing={12}>
         <Stack
-          direction={{ base: 'column'}}
+          direction={{ base: 'column', md: 'row'}}
           spacing={{ base: 4, md: 2, lg: 8 }}
         >
           <Testimonial>
